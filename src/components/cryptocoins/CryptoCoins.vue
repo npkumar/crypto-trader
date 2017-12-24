@@ -1,7 +1,9 @@
 <template>
   <div>
-    <crypto-coin v-for="coin in cryptoCoins">
-
+    <crypto-coin
+      v-for="(coin, i) in cryptoCoins"
+      :coin="coin"
+      :key="i">
     </crypto-coin>
   </div>
 </template> 
