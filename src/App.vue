@@ -14,6 +14,9 @@
   export default {
     components: {
       appHeader: Header
+    },
+    created() {
+      this.$store.dispatch('initCoins')
     }
   }
 </script>

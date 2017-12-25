@@ -18,10 +18,10 @@
         <div class="pull-right">
           <button
             class="btn btn-success"
-            @click="buyStock"
+            @click="buyCoin"
             :disabled="quantity <= 0 || !!Number.isInteger(quantity)"
             >Buy</button>
-        </div>
+        </div> 
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@ export default {
     }
   },
   methods: {
-    buyStock() {
+    buyCoin() {
       const order = {
         coinId: this.coin.id,
         coinPrice: this.coin.price,
