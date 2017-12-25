@@ -42,7 +42,7 @@ export default {
         coinPrice: this.coin.price,
         quantity: this.quantity
       };
-      console.log(order);
+      this.$store.dispatch('buyCoin', order);
       this.quantity = 0;
     }
   }
