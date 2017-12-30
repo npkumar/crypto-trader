@@ -2,7 +2,7 @@
   <div>
     <h1>Your Crypto Portfolio</h1>
     <hr />
-    <p>Your Funds: {{ funds }}</p>
+    <p>Your Funds: {{ funds | currency }}</p>
   </div> 
 </template>
 
