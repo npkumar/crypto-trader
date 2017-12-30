@@ -8,8 +8,10 @@ const mutations = {
   'SET_COINS' (state, coins) {
     state.coins = coins;
   },
-  'RND_COINS' (state, coins) {
-
+  'RND_COINS' (state) {
+    state.coins.forEach(coin => {
+      coin.price = Math.round(coin.price * ( 1 + Math.random() - 0.2));
+    });
   }
 }
 
