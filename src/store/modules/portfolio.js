@@ -37,6 +37,11 @@ const mutations = {
             );
             state.funds += coinPrice * record.quantity;
         }
+    },
+
+    'SET_PORTFOLIO'(state, portfolio) {
+        state.funds = portfolio.funds;
+        state.coinPortfolio = portfolio.coinPortfolio ? portfolio.coinPortfolio : [];
     }
 };
 

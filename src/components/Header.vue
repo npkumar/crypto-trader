@@ -29,7 +29,7 @@
             <ul class="dropdown-menu">
               <li><a href="#" @click="saveData">Save Data</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Load Data</a></li>
+              <li><a href="#" @click="loadData">Load Data</a></li>
             </ul>
           </li>
         </ul>
@@ -53,9 +53,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'randomizeCoins'
-    ]),
+    ...mapActions({
+      randomizeCoins: 'randomizeCoins',
+      fetchData: 'loadData'
+    }),
     endDay() {
       this.randomizeCoins();
     },
@@ -66,6 +67,9 @@ export default {
         coins: this.$store.getters.coins,
       }
       this.$http.put('data.json', data);
+    },
+    loadData() {
+      this.fetchData();
     }
   }
 }
