@@ -42,6 +42,13 @@ const mutations = {
     'SET_PORTFOLIO'(state, portfolio) {
         state.funds = portfolio.funds;
         state.coinPortfolio = portfolio.coinPortfolio ? portfolio.coinPortfolio : [];
+        state.coinPortfolio.forEach(coin => {
+            state.coins.push({
+                id: coin.id,
+                quantity: coin.quantity,
+                price: coin.price
+            });
+        })
     }
 };
 

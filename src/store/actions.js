@@ -4,7 +4,6 @@ export const loadData = ({ commit }) => {
     Vue.http.get('data.json')
         .then(data => {
             data = data.body;
-            console.log(data)
             if (data) {
                 const coins = data.coins;
                 const funds = data.funds;
