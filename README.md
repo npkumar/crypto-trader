@@ -2,6 +2,13 @@
 
 > A crypto-trader platform using Vue
 
+
+![Home](https://github.com/npkumar/crypto-trader/blob/master/screenshots/cryto_home.PNG)
+
+![Coins](https://github.com/npkumar/crypto-trader/blob/master/screenshots/crypto_coins.PNG)
+
+![Portfolio](https://github.com/npkumar/crypto-trader/blob/master/screenshots/crypto_portfolio.PNG)
+
 ## Build Setup
 
 ``` bash
